@@ -1,0 +1,85 @@
+*,
+*::after,
+*::before{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: hsl(0, 0%, 2%);
+  --accent: hsl(217, 90%, 55%);
+  --accent-hover: hsl(217, 90%, 50%);
+  
+  --surface: hsl(0, 0%, 10%);
+  --surface-hover: hsl(0, 0%, 15%);
+  --border: hsl(0, 0%, 20%);
+  --border-hover: hsl(0, 0%, 25%);
+  
+  --text: hsl(0, 0%, 95%);
+  --text2: hsl(0, 0%, 90%);
+  --muted-text: hsl(0, 0%, 70%);
+  
+  --font-heading: "Geist", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --font-code: "JetBrains Mono", monospace;
+}
+
+.light {
+  --bg: hsl(0, 0%, 100%);
+
+  --accent: hsl(217, 90%, 55%);
+  --accent-hover: hsl(217, 90%, 50%);
+
+  --surface: hsl(0, 0%, 97%);
+  --surface-hover: hsl(0, 0%, 94%);
+
+  --border: hsl(0, 0%, 85%);
+  --border-hover: hsl(0, 0%, 80%);
+
+  --text: hsl(0, 0%, 5%);
+  --text2: hsl(0, 0%, 10%);
+  --muted-text: hsl(0, 0%, 30%);
+
+  --font-heading: "Geist", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --font-code: "JetBrains Mono", monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+  transition: all 0.5s ease;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100dvh;
+  font-family: var(--font-body);
+
+::selection {
+  background: color-mix(in srgb, var(--accent) 80%, white);
+  color: white;
+}
+::-moz-selection {
+  background: color-mix(in srgb, var(--accent) 80%, white);
+  color: white;
+}
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--surface-hover);
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--border-hover);
+}
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--surface-hover) transparent;
+}

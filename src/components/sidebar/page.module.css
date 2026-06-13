@@ -1,0 +1,76 @@
+.sidebar {
+  position: fixed;
+  width: 350px;
+  height: 100dvh;
+  background: var(--bg);
+  top: 0;
+  right: -400px;
+  border-left: 1px solid var(--border);
+  z-index: 999;
+  transition: 0.5s ease;
+}
+
+.open {
+  right: 0;
+  transition: 0.5s ease;
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 20px 20px;
+}
+
+.close {
+  background: none;
+  border: none;
+}
+
+.close i {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 30px;
+  padding: 10px;
+  margin: 5px;
+  transition: 0.2s ease;
+}
+
+.close i:hover{
+  cursor: pointer;
+  color: var(--text2);
+}
+
+.divider {
+  height: 1px;
+  background: var(--border);
+}
+
+.bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  padding: 5px 20px;
+}
+
+.button {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 25px;
+  padding: 15px 20px;
+  margin: 15px 4px;
+  transition: 0.2s ease;
+  font-family: var(--font-body);
+  font-weight: 500;
+  border-radius: 15px;
+  width: 100%;
+  border: 1px solid transparent;
+}
+
+.button:hover {
+  background: var(--surface);
+  border: 1px solid var(--border);
+}

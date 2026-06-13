@@ -1,0 +1,142 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: min(90dvw, 1000px);
+
+  text-align: center;
+
+  margin: 0 auto;
+  margin-top: 100px;
+  padding: 80px 5px;
+
+  position: relative;
+  z-index: 2;
+}
+
+.badge {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+
+  padding: 0.55rem 1rem;
+
+  border: 1px solid var(--border);
+  background: var(--surface);
+
+  border-radius: 999px;
+
+  color: var(--muted-text);
+
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 600;
+
+  margin-bottom: 2rem;
+}
+
+.badge span {
+  width: 8px;
+  height: 8px;
+
+  border-radius: 50%;
+  background: var(--accent);
+
+  box-shadow: 0 0 12px var(--accent);
+}
+
+.main h1 {
+  font-family: var(--font-heading);
+
+  font-size: clamp(4rem, 8vw, 7rem);
+
+  line-height: 0.95;
+  letter-spacing: -0.08em;
+
+  font-weight: 700;
+
+  color: var(--text);
+
+  margin-bottom: 2rem;
+}
+
+.main h1 span {
+  background: linear-gradient(
+    180deg,
+    var(--text),
+    var(--accent)
+  );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  color: transparent;
+}
+
+.main p {
+  max-width: 760px;
+
+  font-family: var(--font-body);
+
+  font-size: clamp(1.2rem, 2vw, 1.45rem);
+
+  line-height: 1.8;
+
+  color: var(--muted-text);
+
+  margin-bottom: 3rem;
+}
+
+.main p span {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.primary,
+.secondary {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+
+  padding: 1rem 1.4rem;
+
+  border-radius: 14px;
+
+  text-decoration: none;
+
+  font-family: var(--font-body);
+  font-weight: 600;
+
+  transition: all 0.25s ease;
+}
+
+.primary {
+  background: var(--accent);
+  color: hsl(0, 0%, 95%);
+}
+
+.primary:hover {
+  background: var(--accent-hover);
+  transform: translateY(-3px);
+}
+
+.secondary {
+  background: var(--surface);
+  color: var(--text);
+
+  border: 1px solid var(--border);
+}
+
+.secondary:hover {
+  background: var(--surface-hover);
+  border-color: var(--border-hover);
+
+  transform: translateY(-3px);
+}
